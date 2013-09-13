@@ -327,7 +327,7 @@ sub find_type_handler {
     # 100% ideal though, but until I
     # come up with a decent test case
     # it will do for now.
-    if ($type_constraint->can('is_subtype_of') {
+    if ($type_constraint->can('is_subtype_of')) {
         foreach my $type (keys %TYPES) {
             return $TYPES{$type}
                 if $type_constraint->is_subtype_of($type);
