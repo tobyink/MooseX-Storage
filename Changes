@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - consistently use stringification (i.e. "" overload) of type constraint
+    objects in MooseX::Storage::Engine, instead of sometimes calling 'name'
+    method.
 
 0.43      2013-09-11 01:47:40Z (Karen Etheridge)
   - removed use of deprecated Class::MOP::load_class
