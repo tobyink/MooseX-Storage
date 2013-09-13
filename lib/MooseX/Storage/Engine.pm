@@ -317,8 +317,8 @@ sub find_type_handler {
     # this should handle most type usages
     # since they they are usually just
     # the standard set of built-ins
-    return $TYPES{$type_constraint->name}
-        if exists $TYPES{$type_constraint->name};
+    return $TYPES{$type_constraint}
+        if exists $TYPES{$type_constraint};
 
     # the next possibility is they are
     # a subtype of the built-in types,
